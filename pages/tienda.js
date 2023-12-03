@@ -3,7 +3,7 @@ export default function Tienda() {
   return (
     <Layout
         title={'Tienda'}
-        description="Sobre nosotros, GuitarraLA, tienda de música">
+        description="Tienda virtual, de guitarras, instrumentos, GuitarrasLA">
         <h1>Tienda Virtual</h1>
     </Layout>
   )
