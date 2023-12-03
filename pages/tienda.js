@@ -1,10 +1,10 @@
 import Layout from '../components/layout'
-export default function Nosotros() {
+export default function Tienda() {
   return (
     <Layout
-        title={'Nosotros'}
+        title={'Tienda'}
         description="Sobre nosotros, GuitarraLA, tienda de música">
-        <div>nosotros</div>
+        <h1>Tienda Virtual</h1>
     </Layout>
   )
 }
