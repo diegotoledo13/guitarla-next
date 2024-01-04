@@ -1,5 +1,6 @@
 import Layout from "../components/layout";
 import Guitarra from "../components/guitarra";
+import styled from "../styles/grid.module.css";
 
 export default function Tienda({ guitarras }) {
   console.log(guitarras);
@@ -10,9 +11,11 @@ export default function Tienda({ guitarras }) {
     >
       <main className="contenedor">
         <h2 className="heading">Nuestra Colección</h2>
-        {guitarras.map((guitarra) => (
-          <Guitarra key={guitarra.id} guitarra={guitarra.attributes} />
-        ))}
+        <div className={styled.grid}>
+          {guitarras.map((guitarra) => (
+            <Guitarra key={guitarra.id} guitarra={guitarra.attributes} />
+          ))}
+        </div>
       </main>
     </Layout>
   );
