@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styled from "../../styles/guitarras.module.css";
 import Layout from "../../components/layout";
+import Link from "next/link";
 
 export default function Producto({ guitarra }) {
   const { nombre, descripcion, imagen, precio } = guitarra[0].attributes;
@@ -20,6 +21,9 @@ export default function Producto({ guitarra }) {
           </p>
           <p className={styled.precio}>${precio}</p>
         </div>
+        <Link className={styled.enlace} href="/tienda">
+          Volver al inicio
+        </Link>
       </div>
     </Layout>
   );
