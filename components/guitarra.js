@@ -4,7 +4,6 @@ import styled from "../styles/guitarras.module.css";
 
 export default function Guitarra({ guitarra }) {
   const { descripcion, imagen, nombre, precio, url } = guitarra;
-  console.log();
   return (
     <div className={styled.guitarra}>
       <Image
