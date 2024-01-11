@@ -6,11 +6,11 @@ export default function Carrito() {
     <Layout>
       <main className="contenedor">
         <h1 className="heading">Carrito</h1>
-        <div>
-          <div>
+        <div className={style.contenido}>
+          <div className={style.carrito}>
             <h2>Artículos</h2>
           </div>
-          <aside>
+          <aside className={style.resumen}>
             <h3>Resumen del Pedido</h3>
             <p>Total a pagar</p>
           </aside>

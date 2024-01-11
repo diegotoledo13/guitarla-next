@@ -6,11 +6,10 @@ import styles from "../styles/grid.module.css";
 
 export default function Home({ guitarras, posts, curso }) {
   return (
-    <>
-      <Layout
-        title={"Inicio"}
-        description={"Blog de música, venta de guitarras y más"}
-      ></Layout>
+    <Layout
+      title={"Inicio"}
+      description={"Blog de música, venta de guitarras y más"}
+    >
       <main className="contenedor">
         <h1 className="heading">Nuestra Coleccion</h1>
         <div className={styles.grid}>
@@ -30,7 +29,7 @@ export default function Home({ guitarras, posts, curso }) {
           </div>
         </div>
       </section>
-    </>
+    </Layout>
   );
 }
 
