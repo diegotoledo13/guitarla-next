@@ -5,6 +5,10 @@ import { formatearFecha } from "../../utils/helpers";
 import styles from "../../styles/blog.module.css";
 
 export default function Post({ post }) {
+  if (!post || post.length === 0) {
+    return <div>No se encontró el post</div>;
+  }
+
   const { contenido, imagen, titulo, publishedAt } = post[0].attributes;
   return (
     <Layout title={titulo} description={contenido[0].children[0].text}>
