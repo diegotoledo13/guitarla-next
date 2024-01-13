@@ -1,13 +1,18 @@
 import { useEffect, useState } from "react";
 import "../styles/globals.css";
 
-export default function App({ Component, pageProps }) {
-  const carritoLS =
-    typeof window !== "undefined"
-      ? JSON.parse(localStorage.getItem("carrito")) ?? []
-      : null;
+const carritoLS =
+  typeof window !== "undefined"
+    ? JSON.parse(localStorage.getItem("carrito")) ?? []
+    : [];
 
+export default function App({ Component, pageProps }) {
   const [carrito, setCarrito] = useState(carritoLS);
+  const [paginaLista, setPaginaLista] = useState(false);
+
+  useEffect(() => {
+    setPaginaLista(true);
+  }, []);
 
   useEffect(() => {
     localStorage.setItem("carrito", JSON.stringify(carrito));
@@ -49,7 +54,7 @@ export default function App({ Component, pageProps }) {
     setCarrito(carritoActualizado);
     window.localStorage.setItem("carrito", JSON.stringify(carrito));
   };
-  return (
+  return paginaLista ? (
     <Component
       {...pageProps}
       carrito={carrito}
@@ -57,5 +62,5 @@ export default function App({ Component, pageProps }) {
       eliminarProducto={eliminarProducto}
       actualizarCantidad={actualizarCantidad}
     />
-  );
+  ) : null;
 }
