@@ -10,9 +10,11 @@
   },
   "dependencies": {
     "@nodelib/fs.scandir": "^2.1.5",
+    "g": "^2.0.1",
     "next": "14.0.3",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "vercel": "^33.1.0"
   },
   "devDependencies": {
     "eslint": "^8",
